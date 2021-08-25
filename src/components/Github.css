@@ -1,0 +1,96 @@
+.github2 {
+  color: lightblue;
+  transform: scale(16.5);
+  animation: animate 10s ease-in-out forwards;
+}
+
+@keyframes animate {
+  0% {
+    color: #0004;
+    text-shadow: none;
+  }
+  100% {
+    color: lightblue;
+    text-shadow: 0 0 10px lightblue, 0 0 20px lightblue, 0 0 40px lightblue,
+      0 0 80px lightblue, 0 0 160px lightblue;
+  }
+}
+
+@media (max-width: 414px) {
+  .content2 {
+    height: 100vh;
+    margin-top: 4em;
+  }
+  .container__overview2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .githubimage__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10em;
+    margin-bottom: 4em;
+  }
+  .github2 {
+    transform: scale(5);
+  }
+
+  .image__maker_overview {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    color: lightblue;
+    width: 15em;
+    text-align: center;
+    font-size: 1rem;
+    font-family: Mitr;
+    margin-bottom: 4em;
+  }
+
+  .container__buttons2 {
+    display: flex;
+    margin-top: 2em;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container__overview2 {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2em;
+  }
+
+  .githubimage__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    height: 25em;
+    width: 25em;
+    overflow: hidden;
+  }
+  .image__maker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image__maker_overview {
+    width: fit-content;
+    margin-top: 2em;
+    font-family: Mitr;
+    color: lightblue;
+    font-size: 1.5rem;
+  }
+  .container__buttons2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4em;
+  }
+}

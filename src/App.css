@@ -1,0 +1,414 @@
+@font-face {
+  font-family: "MyWebFont";
+  font-size: 16px;
+  src: url("./assets/Ailerons_site/AileronsReg/Ailerons.woff2") format("woff2"),
+    url("./assets/Ailerons_site/AileronsReg/Ailerons.ttf") format("truetype");
+}
+
+.App {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 95vw 5vw;
+  grid-template-rows: 2.5em 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header"
+    "content navbar";
+  overflow: hidden;
+}
+
+body {
+  background-color: black;
+}
+
+#overview__netflix {
+  position: fixed;
+  height: fit-content;
+  margin-top: 0;
+}
+
+/* HEADER AREA */
+
+.header {
+  grid-area: header;
+  /* padding-top: 2em;
+  padding-left: 3em; */
+}
+
+.x {
+  display: flex;
+  justify-content: center;
+}
+.x__button {
+  cursor: pointer;
+  transform: scale(1.25);
+}
+
+h1 {
+  font-family: "MyWebFont";
+  color: rgba(157, 219, 227);
+  font-size: 2.75rem;
+}
+
+/* NAVBAR AREA */
+.navbar {
+  display: flex;
+  width: 2em;
+  flex-direction: column;
+  position: absolute;
+  right: 2em;
+  top: 4em;
+}
+
+button {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}
+
+.navbar__links {
+  display: flex;
+  margin-top: 1.5em;
+  height: fit-content;
+  transform-origin: top right;
+  transform: rotate(90deg) translateX(100%);
+  z-index: 1000;
+}
+.link {
+  padding-right: 2em;
+  font-size: 1rem;
+  font-family: Mitr;
+  letter-spacing: 0.5mm;
+  color: rgba(157, 219, 227);
+  cursor: pointer;
+}
+.link:hover {
+  -webkit-text-fill-color: #fff;
+}
+
+.icon {
+  transform: rotate(-90deg) scale(1.2);
+  margin-right: 1em;
+  margin-left: 0.5em;
+  color: rgba(157, 219, 227);
+  cursor: pointer;
+}
+
+/* CONTENT AREA */
+.content {
+  grid-area: content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+h2 {
+  font-family: "MyWebFont";
+  color: rgba(157, 219, 227);
+  font-size: 4rem;
+  font-weight: 300;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-text-stroke-width: 1.9px;
+}
+
+.work__title {
+  margin-right: 2rem;
+}
+
+span {
+  -webkit-text-fill-color: transparent;
+  transition: all 1s ease;
+}
+
+span:hover {
+  text-shadow: 0 0 20px rgba(157, 219, 227);
+  -webkit-text-fill-color: #fff;
+  opacity: 1;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container__overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#crypto__overview {
+  width: 100vw;
+}
+
+.crypt {
+  margin-left: 1em;
+  margin-top: 2em;
+}
+
+.container__buttons {
+  display: flex;
+  margin-top: 4em;
+}
+
+.btn {
+  -webkit-appearance: none;
+  -webkit-border: none;
+  -moz-appearance: none;
+  font-family: Mitr;
+  letter-spacing: 0.25mm;
+  background: none;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border: 0.15em solid lightblue;
+  padding-right: 1.75em;
+  padding-left: 1.75em;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  margin-right: 0.8em;
+  outline: none;
+  color: lightblue;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(157, 219, 227);
+  font-size: 1rem;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  color: lightblue;
+  font-family: Mitr;
+  font-weight: lighter;
+  font-size: 1.25rem;
+  line-height: 1.25em;
+  text-align: left;
+  margin-top: 1em;
+  overflow: hidden;
+}
+
+.container__images {
+  display: flex;
+  float: left;
+}
+
+.logo {
+  transform: scale(0.75);
+}
+
+/* TRANSITIONS */
+
+.page {
+  position: relative;
+}
+.page-enter-active {
+  overflow: hidden;
+  position: fixed;
+}
+
+.active__title {
+  margin-left: auto;
+  width: fit-content;
+  font-family: "MyWebFont";
+  color: rgba(157, 219, 227);
+  font-weight: 300;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-text-stroke-width: 1.9px;
+  -webkit-text-fill-color: transparent;
+  animation: fade 2s 2.5s ease forwards;
+}
+
+.active__title:hover {
+  animation: fade__in 3s 1s ease-in forwards;
+  animation: light 3s 1a ease forwards;
+  text-shadow: 0 0 10px rgba(157, 219, 227);
+  -webkit-text-fill-color: #fff;
+}
+
+/* @keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade__in {
+  0% {
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
+/* Media Queries */
+
+@media (max-width: 414px) {
+  .work__title {
+    font-size: 2.5rem !important;
+  }
+
+  .image__container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4em;
+  }
+  .btn {
+    font-size: 0.65rem !important;
+  }
+  #demo {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  /* HEADER AREA */
+
+  .header {
+    display: flex;
+    align-items: center;
+    grid-area: header;
+    height: fit-content;
+    z-index: 1;
+  }
+
+  h1 {
+    font-family: "MyWebFont";
+    color: rgba(157, 219, 227);
+    font-size: 1.75rem;
+  }
+
+  .work__title {
+    font-size: 2.75rem;
+  }
+
+  /* NAVBAR AREA */
+
+  .navbar__links {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    align-items: flex-start;
+  }
+  /* CONTENT AREA */
+
+  .container__overview {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40%;
+    margin: auto;
+  }
+
+  #overview__netflix {
+    margin-top: 0;
+  }
+
+  #description__netflix {
+    font-size: 0.95rem;
+  }
+
+  .content {
+    text-align: left;
+    padding-left: 0.1em;
+    width: 90%;
+  }
+
+  .component__title {
+    display: flex;
+    width: 80vw;
+  }
+
+  .container__buttons {
+    margin: auto;
+    margin-top: 1.25em;
+  }
+
+  .btn {
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    font-size: 0.7rem;
+  }
+
+  .overview {
+    width: 70%;
+    font-size: 1rem;
+  }
+
+  .container__images {
+    transform: scale(0.65);
+  }
+
+  h2 {
+    font-size: 1.75rem !important;
+    font-weight: 300;
+    margin-top: 1.7rem;
+    margin-left: 0.45em;
+    color: rgba(157, 219, 227) !important;
+  }
+
+  span {
+    -webkit-text-fill-color: rgba(157, 219, 227);
+  }
+
+  .active__title {
+    animation: none;
+    font-size: 2.25rem;
+    text-align: center;
+    align-items: center;
+    -webkit-text-fill-color: rgba(157, 219, 227);
+    padding-bottom: 0.5em;
+  }
+
+  .container__video {
+    object-fit: cover;
+  }
+}
+
+#crypto {
+  display: flex;
+  justify-content: flex-end;
+  width: 80vw;
+}
+
+@media (min-width: 1000px) {
+  h2 {
+    font-size: 10rem;
+  }
+
+  .active__title {
+    font-size: 8rem;
+  }
+
+  .header {
+    display: flex;
+  }
+
+  .x {
+    position: absolute;
+    right: 50%;
+  }
+
+  .image__container {
+    justify-content: center;
+    align-items: center;
+    padding-left: 6em;
+    margin-left: 40em;
+    top: 0;
+  }
+}

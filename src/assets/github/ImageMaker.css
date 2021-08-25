@@ -1,0 +1,40 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin-left: 10em;
+}
+
+.grid {
+  grid-area: grid;
+  display: flex;
+  margin-left: auto;
+  margin-right: 10em;
+  align-items: center;
+}
+
+.gridspace {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25em;
+  height: 25em;
+}
+
+.test {
+  width: 5em;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 414px) {
+  .gridspace {
+    width: 10em;
+    height: 10em;
+  }
+  .test {
+    width: 2em;
+    height: 2em;
+  }
+}

@@ -1,0 +1,109 @@
+.overlay__container {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.overlay {
+  width: 100%;
+  border: 3.2px solid rgba(157, 219, 227);
+  overflow: hidden;
+}
+
+.vid__tv {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  filter: brightness(50%);
+}
+
+.vid__netflix {
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+  animation: demo 1s ease forwards;
+}
+
+.chill2 {
+  opacity: 0.2;
+}
+
+.vid__crypto {
+  width: 100%;
+  animation: demo 1s ease forwards;
+}
+
+.vid__about {
+  filter: hue-rotate(25deg) brightness(55%);
+}
+
+.github__mobile {
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes demo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 450px) {
+  .overlay__container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  }
+}
+
+.home__mobile {
+  transform-origin: bottom;
+  height: 100%;
+  transform: rotateY(180deg);
+  z-index: -10;
+}
+
+.chill {
+  transform-origin: bottom;
+  transform: translateY(90vw) translateX(-0.25em);
+}
+.gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform-origin: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: -10;
+}
+.clouds {
+  transform-origin: left;
+  transform: translateX(-0.25em);
+  object-fit: fill;
+}
+.clouds__big {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -10;
+}
+.crypto__tracker {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -10;
+}
+
+.crypto5 {
+  height: 100%;
+  width: 100%;
+  opacity: 70%;
+}
