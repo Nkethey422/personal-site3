@@ -111,7 +111,14 @@ function Netflix({ home, setHome, selected, demo, setDemo, net, isMobile }) {
           >
             DEMO
           </button>
-          <button className="btn">VIEW CODE</button>
+          <button
+            className="btn"
+            onClick={() =>
+              window.open("https://github.com/Nkethey422/netflix-clone")
+            }
+          >
+            VIEW CODE
+          </button>
         </div>
       </div>
     </>

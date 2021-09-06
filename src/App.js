@@ -47,7 +47,7 @@ function App() {
   function handleClick() {
     setTimeout(() => {
       history.push("/");
-    }, 1500);
+    }, 750);
   }
 
   const onEnter = (node) => {

@@ -2,16 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "../App.css";
 import { gsap } from "gsap";
 
-function Crypto({
-  home,
-  setHome,
-  selected,
-  demo,
-  setDemo,
-  net,
-  isMobile,
-  currentLocation,
-}) {
+function Crypto({ home, setHome, demo, setDemo, net, isMobile }) {
   let btns = useRef(null);
   let over = useRef(null);
   console.log(home);
@@ -131,7 +122,14 @@ function Crypto({
               DEMO
             </button>
           ) : null}
-          <button className="btn">VIEW CODE</button>
+          <button
+            className="btn"
+            onClick={() =>
+              window.open("https://github.com/Nkethey422/crypto-tracker")
+            }
+          >
+            VIEW CODE
+          </button>
         </div>
       </div>
     </>
