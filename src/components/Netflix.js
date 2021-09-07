@@ -119,6 +119,16 @@ function Netflix({ home, setHome, selected, demo, setDemo, net, isMobile }) {
           >
             VIEW CODE
           </button>
+          <button
+            className="btn"
+            onClick={() =>
+              window.open(
+                "http://nk-netflix-bucket.s3-website-us-east-1.amazonaws.com/"
+              )
+            }
+          >
+            VISIT PAGE
+          </button>
         </div>
       </div>
     </>
